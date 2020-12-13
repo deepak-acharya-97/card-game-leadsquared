@@ -12,27 +12,19 @@ namespace CardGame
         private readonly IDeck _deck;
         private List<CardBase> _cards;
         private readonly IShuffleCards _shuffleCards;
+        private readonly IPlayCardLogic _playCardLogic;
 
-        public Game(IDeck deck, IShuffleCards shuffleCards)
+        public Game(IDeck deck, IShuffleCards shuffleCards, IPlayCardLogic playCardLogic)
         {
             _deck = deck;
             _cards = deck.Cards;
             _shuffleCards = shuffleCards;
+            _playCardLogic = playCardLogic;
         }
 
         public CardBase PlayCard()
         {
-            CardBase topOfDeck = null;
-            try
-            {
-                topOfDeck = _cards.ElementAt(0);
-                _cards.RemoveAt(0);
-            }
-            catch(Exception ex)
-            {
-
-            }
-            return topOfDeck;
+            return _playCardLogic.PlayCard(_cards);
         }
 
         public void Restart()
