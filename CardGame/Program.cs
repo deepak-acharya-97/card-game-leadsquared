@@ -12,10 +12,16 @@ namespace CardGame
         static void Main(string[] args)
         {
             ICardInitialization cardInitialization = new CardInitialization();
-            List<CardBase> cards = cardInitialization.GetInitialDeckOfCards();
             IShuffleCards shuffleCards = new ShuffleCards();
-            List<CardBase> shuffledCards =  shuffleCards.GetShuffledCards(cards);
-            //List<CardBase> shuffledCards = cards.OrderBy(card => Guid.NewGuid()).ToList();
+            IDeck deck = new Deck(cardInitialization);
+            IPlayCardLogic playCardLogic = new RemoveFrontPlayCardLogic();
+
+            IGame game = new Game(deck, shuffleCards, playCardLogic);
+
+            CardBase cardBase = game.PlayCard();
+            game.ShuffleDeck();
+            cardBase = game.PlayCard();
+            game.Restart();
         }
     }
 }

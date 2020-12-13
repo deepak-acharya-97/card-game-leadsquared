@@ -17,7 +17,7 @@ namespace CardGame
         public Game(IDeck deck, IShuffleCards shuffleCards, IPlayCardLogic playCardLogic)
         {
             _deck = deck;
-            _cards = deck.Cards;
+            _cards = deck.Cards.ToList();
             _shuffleCards = shuffleCards;
             _playCardLogic = playCardLogic;
         }
