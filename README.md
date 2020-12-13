@@ -10,3 +10,5 @@
     - Restart the game
         - Mid way while playing, user may decide to play again.
         - Restarting a game will have all the 52 cards again in hand.
+
+![Deck Of Cards](https://phaser.io/content/news/2017/03/deck-of-cards-tutorial.png)
