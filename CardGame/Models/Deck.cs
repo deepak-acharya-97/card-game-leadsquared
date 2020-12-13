@@ -5,13 +5,14 @@ using System.Text;
 
 namespace CardGame.Models
 {
-    public class Deck
+    public class Deck : IDeck
     {
-        public IList<CardBase> Cards { get; private set; }
+        public List<CardBase> Cards { get; }
 
         public Deck(ICardInitialization cardInitialization)
         {
             Cards = cardInitialization.GetInitialDeckOfCards();
         }
+
     }
 }
