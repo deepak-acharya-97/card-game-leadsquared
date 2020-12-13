@@ -1,4 +1,5 @@
-﻿using CardGame.Interfaces;
+﻿using CardGame.Constant;
+using CardGame.Interfaces;
 using CardGame.Models;
 using System;
 using System.Collections.Generic;
@@ -101,7 +102,7 @@ namespace CardGame.Services
 
         private void AddSpadeNumerics(List<CardBase> cards)
         {
-            foreach (int number in Enumerable.Range(2, 8))
+            foreach (int number in Enumerable.Range(CardConstant.CardStart, CardConstant.CardNumericCount + 1))
             {
                 cards.Add(new Spade(number.ToString()));
             }
@@ -109,7 +110,7 @@ namespace CardGame.Services
 
         private void AddDiamondNumerics(List<CardBase> cards)
         {
-            foreach (int number in Enumerable.Range(2, 8))
+            foreach (int number in Enumerable.Range(CardConstant.CardStart, CardConstant.CardNumericCount + 1))
             {
                 cards.Add(new Diamond(number.ToString()));
             }
@@ -117,7 +118,7 @@ namespace CardGame.Services
 
         private void AddClubNumerics(List<CardBase> cards)
         {
-            foreach (int number in Enumerable.Range(2, 8))
+            foreach (int number in Enumerable.Range(CardConstant.CardStart, CardConstant.CardNumericCount + 1))
             {
                 cards.Add(new Club(number.ToString()));
             }
@@ -125,7 +126,7 @@ namespace CardGame.Services
 
         private void AddHeartNumerics(List<CardBase> cards)
         {
-            foreach (int number in Enumerable.Range(2, 8))
+            foreach (int number in Enumerable.Range(CardConstant.CardStart, CardConstant.CardNumericCount + 1))
             {
                 cards.Add(new Heart(number.ToString()));
             }
