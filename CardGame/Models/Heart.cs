@@ -4,7 +4,11 @@ using System.Text;
 
 namespace CardGame.Models
 {
-    class Heart
+    public class Heart : CardBase
     {
+        public Heart() : base(Suit.Heart)
+        {
+
+        }
     }
 }
