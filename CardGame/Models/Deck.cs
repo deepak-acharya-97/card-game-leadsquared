@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CardGame.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,9 +9,9 @@ namespace CardGame.Models
     {
         public IList<CardBase> Cards { get; private set; }
 
-        public Deck()
+        public Deck(ICardInitialization cardInitialization)
         {
-            Cards = new List<CardBase>();
+            Cards = cardInitialization.GetInitialDeckOfCards();
         }
     }
 }

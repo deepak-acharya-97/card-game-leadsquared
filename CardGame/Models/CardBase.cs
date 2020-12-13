@@ -8,9 +8,10 @@ namespace CardGame.Models
     {
         public CardBase() { }
 
-        public CardBase(Suit suit)
+        public CardBase(Suit suit, string value)
         {
             Suit = suit;
+            Value = value;
         }
 
         public string Value { get; set; }

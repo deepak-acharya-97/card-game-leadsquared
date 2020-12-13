@@ -6,7 +6,7 @@ namespace CardGame.Models
 {
     public class Spade : CardBase
     {
-        public Spade() : base(Suit.Spade)
+        public Spade(string value) : base(Suit.Spade, value)
         {
 
         }

@@ -6,7 +6,7 @@ namespace CardGame.Models
 {
     public class Diamond : CardBase
     {
-        public Diamond() : base(Suit.Diamond)
+        public Diamond(string value) : base(Suit.Diamond, value)
         {
 
         }

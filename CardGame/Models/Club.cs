@@ -6,7 +6,7 @@ namespace CardGame.Models
 {
     public class Club : CardBase
     {
-        public Club() : base(Suit.Club)
+        public Club(string value) : base(Suit.Club, value)
         {
 
         }
