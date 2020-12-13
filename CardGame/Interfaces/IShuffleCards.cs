@@ -7,6 +7,6 @@ namespace CardGame.Interfaces
 {
     public interface IShuffleCards
     {
-        void ShuffledCards(List<CardBase> cards);
+        List<CardBase> GetShuffledCards(List<CardBase> cards);
     }
 }

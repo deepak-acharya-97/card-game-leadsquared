@@ -9,9 +9,9 @@ namespace CardGame.Services
 {
     public class ShuffleCards : IShuffleCards
     {
-        public void ShuffledCards(List<CardBase> cards)
+        public List<CardBase> GetShuffledCards(List<CardBase> cards)
         {
-            cards = cards.OrderBy(card => Guid.NewGuid()).ToList();
+            return cards.OrderBy(card => Guid.NewGuid()).ToList();
         }
     }
 }
